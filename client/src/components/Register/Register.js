@@ -30,6 +30,7 @@ function Register() {
   const Submitdata = () => {
     axios.post("http://localhost:3030/api/v1/user/register", formdata)
       .then((resp) => {
+        alert("user register sucessfull");
         console.log(resp)
         navigate('/')
       })
@@ -102,7 +103,7 @@ function Register() {
             />
             </div>
             <div className="signin">
-                <a href="/">SignIn</a>
+              <a href="/">SignIn</a>
             </div>
 
             <Button variant="primary" className="Register" onClick={() => Submitdata()} type="submit">Submit</Button>
